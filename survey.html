@@ -1,0 +1,223 @@
+<!-- This is CS Department Survey Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Survey Form Section -->
+    <div class="container">
+	<div class="w3-display-container w3-animate-opacity">
+  <img src="Header_logo.png" alt="boat" style="width:15%;min-height:50px;max-height:60px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+	</div>
+        <header class="cs-header text-center mt-4 p-3">
+            <h1>STUDENT SURVEY</h1>
+        </header>
+
+	</div>
+        <section class="mt-5">
+            <form class="cs" autocomplete="on">
+                
+                <!-- First Name and Last Name Fields -->
+				<div class="row">
+					<!-- First Name Field -->
+					<div class="form-group col-md-6 mt-4">
+						<label for="first-name">First Name: <span class="text-danger">*</span></label>
+						<input type="text" id="first-name" name="first-name" class="form-control" required placeholder="Enter your first name">
+					</div>
+
+					<!-- Last Name Field -->
+					<div class="form-group col-md-6 mt-4">
+						<label for="last-name">Last Name: <span class="text-danger">*</span></label>
+						<input type="text" id="last-name" name="last-name" class="form-control" required placeholder="Enter your last name">
+					</div>
+				</div>
+				
+                <div class="form-group col-md-6 mt-4">
+                    <label for="address">Street Address: <span class="text-danger">*</span></label>
+                    <input type="text" id="address" name="address" class="form-control" required placeholder="Ex: 1111 church st">
+                </div>
+				
+				<div class="row">
+					<!-- City Field -->
+					<div class="form-group col-md-4 mt-4">
+						<label for="city">City: <span class="text-danger">*</span></label>
+						<input type="text" id="city" name="city" class="form-control" required placeholder="Enter your city">
+					</div>
+
+					<!-- State Field -->
+					<div class="form-group col-md-4 mt-4">
+						<label for="state">State: <span class="text-danger">*</span></label>
+						<input type="text" id="state" name="state" class="form-control" required placeholder="Enter your state">
+					</div>
+
+					<!-- ZIP Code Field -->
+					<div class="form-group col-md-4 mt-4">
+						<label for="zip">ZIP Code: <span class="text-danger">*</span></label>
+						<input type="text" id="zip" name="zip" class="form-control" required pattern="[0-9]{5}" placeholder="Enter your ZIP code">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-6 mt-4">
+						<label for="tel">Telephone: <span class="text-danger">*</span></label>
+						<input type="tel" id="tel" name="tel" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 123-456-7890" required>
+					</div>
+
+					<div class="form-group col-md-6 mt-4">
+						<label for="email">Email: <span class="text-danger">*</span></label>
+						<input type="email" id="email" name="email" class="form-control" required placeholder="example@domain.com">
+					</div>
+				</div>
+
+                <div class="form-group col-md-4 mt-4">
+                    <label for="survey-date">Date of Survey: <span class="text-danger">*</span></label>
+                    <input type="date" id="survey-date" name="survey-date" class="form-control" required>
+                </div>
+
+                <!-- Checkboxes -->
+                <div class="form-group mt-4">
+                    <label>What did you like most about the campus? <span class="text-danger">*</span></label><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="students" id="students" required>
+                        <label class="form-check-label" for="students">Students</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="location" id="location">
+                        <label class="form-check-label" for="location">Location</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="campus" id="campus">
+                        <label class="form-check-label" for="campus">Campus</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="atmosphere" id="atmosphere">
+                        <label class="form-check-label" for="atmosphere">Atmosphere</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="dorm-rooms" id="dorm-rooms">
+                        <label class="form-check-label" for="dorm-rooms">Dorm Rooms</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="sports" id="sports">
+                        <label class="form-check-label" for="sports">Sports</label>
+                    </div>
+                </div>
+
+                <!-- Radio Buttons -->
+                <div class="form-group mt-4">
+                    <label>How did you become interested in the university? <span class="text-danger">*</span></label><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="interest" id="friends" value="friends" required>
+                        <label class="form-check-label" for="friends">Friends</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="interest" id="tv" value="television">
+                        <label class="form-check-label" for="tv">Television</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="interest" id="internet" value="internet">
+                        <label class="form-check-label" for="internet">Internet</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="interest" id="other" value="other">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+					
+                <div class="form-group mt-3" id="otherReasonDiv" style="display: none;">
+        <label for="otherReason">Please specify your reason:</label>
+        <input type="text" id="otherReason" name="otherReason" class="form-control" placeholder="Enter your reason">
+    </div>
+</div>
+
+<script>
+    // JavaScript to show/hide the text box based on the "Other" selection
+    document.getElementById('other').addEventListener('change', function () {
+        document.getElementById('otherReasonDiv').style.display = 'block';
+    });
+
+    // Hide the text box if any other option is selected
+    document.querySelectorAll('input[name="interest"]').forEach((input) => {
+        input.addEventListener('change', function () {
+            if (this.id !== 'other') {
+                document.getElementById('otherReasonDiv').style.display = 'none';
+            }
+        });
+    });
+</script>           
+
+				<div class="form-group col-md-4 mt-4">
+				<label for="likelihood">How likely are you to recommend the university? <span class="text-danger">*</span></label>
+				<select id="likelihood" name="likelihood" class="form-control" required>
+					<option value="" disabled selected>Select your option</option>
+					<option value="very-likely">Very Likely</option>
+					<option value="likely">Likely</option>
+					<option value="unlikely">Unlikely</option>
+				</select>
+			</div>
+			
+			<!-- Raffle Input Field -->
+                <div class="form-group mt-4">
+                    <label for="raffle">Enter at least ten comma-separated numbers (1-100) for the raffle: <span class="text-danger">*</span></label>
+                    <input type="text" id="raffle" name="raffle" class="form-control" required pattern="([1-9][0-9]?,? ?){10,}" placeholder="Ex: 1, 2, 3, ..., 100">
+                </div>
+				
+			 <!-- Text Area -->
+                <div class="form-group mt-4">
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" name="comments" class="form-control" rows="4" placeholder="Enter your additional comments here"></textarea>
+                </div>		
+
+                <!-- Submit Button -->
+                <div class="form-group mt-4 d-flex justify-content-start">
+					<button type="submit" class="btn btn-success me-2">Submit</button>
+					<button type="reset" class="btn btn-danger">Cancel</button>
+				</div>
+				<br>
+
+            </form>
+	<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item" style = "margin-top: 35px;">
+                        				  <img src="gmlogo.png" alt="boat" style="float: left;padding-top: 0; padding-left: 2em; max-width: 10em;">
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">                       
+                    </div>
+                    <div class="col-md-6 item text" style = "text-align: right; margin-left: -50px;">
+					<div class="col item social" style = "text-align: right; margin-left: 30px; margin-top: 20px;">
+					<a href="https://www.facebook.com/masoncec/"><i class="icon ion-social-facebook"></i></a>
+					<a href="https://twitter.com/Mason_CEC"><i class="icon ion-social-twitter"></i></a>
+					<a href="https://www.youtube.com/@masoncec"><i class="icon ion-social-youtube"></i></a>
+					<a href="https://www.instagram.com/mason_cec/?hl=en"><i class="icon ion-social-instagram"></i></a>
+					</div>
+               <br>
+                        <h3>George Mason University</h3>
+						<ul>
+						 <li>4400 University Drive</li>
+						 <li>Fairfax, Virginia 22030</li>
+                         <li>Tel or SMS: +1703-993-1000</li>
+						</ul>
+							<p class="copyright">© 2024 George Mason University</p>
+                     </div>
+				</div>
+            </div>
+        </footer>
+    </div>
+        </section>
+		
+    </div>
+
+</body>
+
+</html>
